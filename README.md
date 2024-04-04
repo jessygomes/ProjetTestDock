@@ -1,4 +1,4 @@
-# Dépôt de Développement React et Next.js
+# Dépôt de Développement React et Next.js sous Docker
 
 Ce dépôt contient des configurations de serveurs de développement pour les applications React et Next.js. Les serveurs de développement sont organisés dans des dossiers distincts pour React et Next.js, offrant la possibilité de choisir l'environnement de développement approprié pour votre projet.
 
