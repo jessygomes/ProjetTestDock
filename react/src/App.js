@@ -20,6 +20,8 @@ function App() {
             🔥
             </span>
         </a>
+        <a className="App-link" href="https://reactjs.org/docs/getting-started.html" target="_blank" rel="noopener noreferrer"> Documentation React</a>
+        <a className="App-link" href="https://reactjs.org/tutorial/tutorial.html" target="_blank" rel="noopener noreferrer"> React Tutorial</a>
       </header>
     </div>
   );
