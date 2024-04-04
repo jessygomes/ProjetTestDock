@@ -1,30 +1,13 @@
-# React + TypeScript + Vite
+## Exécution de l'image Docker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Vous pouvez exécuter le conteneur en utilisant la commande suivante :
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+docker run -d -p 5173:5173 -v ./:/app --name <nom> viteserv.latest
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Cette commande lance le conteneur Docker en mode détaché (`-d`), expose le port 3000 de votre conteneur vers le port 3000 de votre machine hôte (`-p 5173:5173`), et monte le répertoire courant (`./`) dans le conteneur à l'emplacement `/app` (`-v ./:/app`). Assurez-vous d'exécuter cette commande depuis le répertoire du projet.
+
+### Remarque :
+- Assurez-vous que Docker est installé et fonctionne correctement sur votre machine.
+- L'application React devrait être disponible à l'adresse `http://<adresse-serveur>:5173` une fois que le conteneur est en cours d'exécution.
